@@ -1,0 +1,107 @@
+<!-- 
+    ========================================
+    PANEL DE GESTIÓN DE USUARIOS
+    Comentarios generados por IA
+    ========================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos básicos del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANEL DE GESTION DE USUARIOS</title>
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Framework Bootstrap para estilos responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient">
+
+<!-- Contenedor principal de la aplicación -->
+<div class="container mt-4">
+    <!-- Título principal del panel -->
+    <h1 class="text-center mb-4 text-primary fw-bold">👥 PANEL DE GESTION DE USUARIOS 👥</h1>
+    
+    <!-- Formulario para registrar un usuario nuevo -->
+    <form id="formUsuario" class="row g-3 mb-4">
+        <!-- Campo para capturar el nombre del usuario -->
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="Nombre" placeholder="Nombre" required>
+        </div>
+        <!-- Campo para capturar el apellido del usuario -->
+        <div class="col-md-3">
+            <input type="text" class="form-control" id="Apellido" placeholder="Apellido" required>
+        </div>
+        <!-- Campo para capturar la edad del usuario -->
+        <div class="col-md-2">
+            <input type="number" class="form-control" id="Edad" placeholder="Edad" required>
+        </div>
+        <!-- Campo para capturar el correo electrónico del usuario -->
+        <div class="col-md-3">
+            <input type="email" class="form-control" id="email" placeholder="Ingrese el correo electrónico" required>
+        </div>
+        <!-- Selector para elegir el rol del usuario -->
+        <div class="col-md-3">  
+            <select id="rol" class="form-select">
+                <option value="">Seleccionar rol</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Usuario">Usuario</option>
+            </select>
+        </div>
+        <!-- Botón para enviar el formulario y agregar el usuario -->
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-success w-100">➕ Agregar Usuario ➕</button>
+        </div>
+    </form>
+    
+    <!-- Filtro por rol para visualizar usuarios según su permiso -->
+    <div class="mb-3">  
+        <select id="filtro-rol" class="form-select w-25 border-info">
+            <option value="">FILTRAR POR ROL</option>
+            <option value="Administrador">🛡️ Administrador</option>
+            <option value="Usuario">👤 Usuario</option>
+        </select>
+    </div>
+
+    <!-- Filtro por estado para visualizar usuarios activos o inactivos -->
+    <div class="mb-3">  
+        <select id="filtro-estado" class="form-select w-25 border-info">
+            <option value="">FILTRAR POR ESTADO</option>
+            <option value="Activo">✅ Activo</option>
+            <option value="Inactivo">❌ Inactivo</option>
+        </select>
+    </div>
+
+    <!-- Contadores visuales de usuarios activos e inactivos -->
+    <div class="mb-3">
+        <span class="badge bg-success fs-6" id="contador-activos">✅ Usuarios Activos: 0</span>
+        <span class="badge bg-danger fs-6 ms-2" id="contador-inactivos">❌ Usuarios Inactivos: 0</span>
+    </div>
+
+    <!-- Tabla de usuarios generada por IA -->
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered shadow">
+            <thead class="table-primary">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Email</th>
+                    <th>Rol</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaUsuarios"></tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Script principal de la aplicación -->
+<script src="Script.js"></script>
+</body>
+</html>

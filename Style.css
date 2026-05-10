@@ -1,0 +1,123 @@
+/* ========================================
+   ESTILOS PRINCIPALES DEL PANEL DE GESTIÓN DE USUARIOS
+   Archivo: Style.css
+   Generado por IA
+   ======================================== */
+
+/* Estilo general del body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #dfe9ff 0%, #ffffff 50%, #b8d9ff 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Fondo degradado cuando se usa la clase bg-gradient */
+.bg-gradient {
+    background: linear-gradient(135deg, #e3f2fd 0%, #ffffff 65%, #e8f5e9 100%);
+}
+
+/* Contenedor principal centrado */
+.container {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 18px;
+    box-shadow: 0 20px 45px rgba(79, 84, 99, 0.12);
+    padding: 30px 28px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+/* Título de la aplicación */
+h1 {
+    letter-spacing: 0.02em;
+}
+
+/* Formulario de ingreso de usuario */
+#formUsuario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+    align-items: end;
+}
+
+#formUsuario .col-md-5,
+#formUsuario .col-md-4,
+#formUsuario .col-md-3,
+#formUsuario .col-md-2,
+#formUsuario .col-md-1 {
+    width: 100%;
+}
+
+#formUsuario input,
+#formUsuario select {
+    width: 100%;
+    border: 1px solid #cad1db;
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#formUsuario input:focus,
+#formUsuario select:focus {
+    outline: none;
+    border-color: #6cb4ff;
+    box-shadow: 0 0 0 4px rgba(108, 180, 255, 0.12);
+}
+
+#formUsuario button {
+    grid-column: 1 / -1;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+/* Estilos responsivos para el formulario */
+@media (max-width: 900px) {
+    #formUsuario {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contenedor de tabla o lista futura */
+.table-wrapper {
+    margin-top: 24px;
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.user-table th,
+.user-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.user-table th {
+    background: #f1f5f9;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.user-table tbody tr:hover {
+    background: rgba(108, 180, 255, 0.08);
+}
+
+/* Mensajes y notificaciones */
+.alert-message {
+    margin-top: 1rem;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: #e8f5e9;
+    color: #1b5e20;
+    border: 1px solid #c8e6c9;
+}
